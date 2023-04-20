@@ -1,0 +1,4 @@
+< Agrege el normalize.css
+< No se puede colocar width y heigth a los elementos en linea.
+< border-radius: 10px
+< 
