@@ -60,6 +60,7 @@ body{
     background-color: rgb(218, 44, 44);
     height: 420px;
     width: 100%;
+    display: flex;
     background-size: cover;
     background-position: center;
 }
@@ -104,6 +105,9 @@ body{
     background-color: rgb(93, 44, 218);
     height: 420px;
     width: auto;
+    display: flex;
+    background-size: contain;
+    background-position: center;
 }
 .cont4 {
     justify-self: stretch;
