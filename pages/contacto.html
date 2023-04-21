@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="logofavicon" rel="shortcut icon" href="../multimedia/img/logos/icologonegro.ico" type="image/x-icon">
+    <link id="logofavicon" rel="shortcut icon" href="../multimedia/img/logos/faviconGEGblanco.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto</title>
 </head>
 <body>
     <header id="header">
-        <!-- <div class="logo">
-        </div> -->
         <span class="tituloHeader">GLOBAL ENERYGY GROUP S.A.</span><br>
         <nav class="navegacionHeader">
             <ul>
@@ -30,27 +28,24 @@
     </header>
     <main class="container-fluid">
         <div class="row">
-            <aside class="col-sm-12 col-md-12 mapaContacto">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13137.389801920863!2d-58.379234!3d-34.5953746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbe1d6f9366b%3A0x29ef37999c195664!2sGlobal%20Energy%20Group!5e0!3m2!1ses!2sar!4v1679954344796!5m2!1ses!2sar" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <aside class="col-md-6 formularioContacto">
+                <div class="container">
+                    <form method="post" class="form-group">
+                        <label>Nombre<span class="requerido">*</span></label>
+                        <input type="text" class="form-control" required /><br>
+                        <label>Apellido<span class="requerido">*</span></label>
+                        <input type="text" class="form-control" required /><br>
+                        <label>E-mail<span class="requerido">*</span></label>
+                        <input type="email" class="form-control" required /><br>
+                        <label>Mensaje<span class="requerido">*</span></label><br>            
+                        <textarea class="form-control textarea" cols="50" rows="10" required resize></textarea><br>
+                        <input class="botonFormulario" type="reset" value="Reset">
+                        <input class="botonFormulario" type="submit" value="Enviar">
+                    </form>
+                </div>
             </aside>
-        <aside class="col-sm-12 col-md-6 bg-success formularioContacto">
-            <div class="container">
-                <form method="post" class="form-group">
-                    <label>Nombre<span class="requerido">*</span></label>
-                    <input type="text" class="form-control" required /><br>
-                    <label>Apellido<span class="requerido">*</span></label>
-                    <input type="text" class="form-control" required /><br>
-                    <label>E-mail<span class="requerido">*</span></label>
-                    <input type="email" class="form-control" required /><br>
-                    <label>Mensaje<span class="requerido">*</span></label><br>            
-                    <textarea class="textarea" cols="50" rows="10" required resize></textarea><br>
-                    <input type="reset" value="Reset">
-                    <input type="submit" value="Enviar">
-                </form>
-            </div>
-        </aside>
-        <aside class="col-sm-12 col-md-6 bg-info">
-            <div class="redesContacto">
+            <div class="col-md-6 redesContacto">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13137.389801920863!2d-58.379234!3d-34.5953746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbe1d6f9366b%3A0x29ef37999c195664!2sGlobal%20Energy%20Group!5e0!3m2!1ses!2sar!4v1679954344796!5m2!1ses!2sar" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
                 <ul>
                     <li><i class="fa-solid fa-location-dot"></i><a href="https://maps.google.com/maps?q=Av.%20Santa%20Fe%20846,%20Ciudad%20Aut%C3%B3noma%20de%20Buenos%20Aires,%20Ciudad%20Aut%C3%B3noma%20de%20Buenos%20Aires,%20Argentina" target="_blank"> Av. Santa Fe 846, Ciudad Autónoma de Buenos Aires</a></li>
                     <li><i class="fa-regular fa-envelope"></i> info@globalenergygroup.com.ar</li>
@@ -59,9 +54,8 @@
                     <li><i class="fa-brands fa-twitter"></i><a href="http://twitter.com/globalenergygr" target="_blank"> globalenergygr</a></li>
                     <li><i class="fa-brands fa-whatsapp"></i> +5491141876688</li>
                 </ul>
-            </div>   
-        </aside>
-        </div>     
+            </div>
+        </div>  
     </main>
     <footer id="footer">
         <div class="redesFooter">

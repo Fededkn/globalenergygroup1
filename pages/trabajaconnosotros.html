@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="logofavicon" rel="shortcut icon" href="../multimedia/img/logos/icologonegro.ico" type="image/x-icon">
+    <link id="logofavicon" rel="shortcut icon" href="../multimedia/img/logos/faviconGEGblanco.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Trabaja con nosotros</title>
 </head>
 <body>
     <header id="header">
-        <!-- <div class="logo">
-        </div> -->
         <span class="tituloHeader">GLOBAL ENERYGY GROUP S.A.</span><br>
         <nav class="navegacionHeader">
             <ul>
@@ -30,22 +28,28 @@
     </header>
     <main class="container-fluid">
         <div class="row">
-            <aside class="col-sm-12 col-md-4 bg-white">
+            <aside class="col-sm-12 col-md-6 col-lg-4">
                 <form method="post" class="form-group">
                 <label>Nombre<span class="requerido">*</span></label>
+                    <input type="text" class="form-control" required />
+                <label>Apellido<span class="requerido">*</span></label>
                     <input type="text" class="form-control" required />
                 <label>D.N.I. <span class="requerido">*</span></label>
                     <input type="number" class="form-control" required />
                 <label>Fecha de nacimiento <span class="requerido">*</span></label>
                     <input type="date" class="form-control" required />
-                <label>Género</label>
-                    <p>Hombre<input type="radio" name="genero" value="hombre">Mujer<input type="radio" name="genero" value="mujer">Sin especificar <input type="radio" name="genero" value="sin especificar"></p>
+                    <label>Género</label>
+                    <span class="género">
+                        <p>Hombre <input type="radio" name="genero" value="hombre"></p>
+                        <p>Mujer <input type="radio" name="genero" value="mujer"></p> 
+                        <p>Sin especificar <input type="radio" name="genero" value="sin especificar"></p>
+                    </span>    
                 <label>Whatsapp</label>
                     <input type="number" class="form-control" placeholder="(Ej. 54 9 1141876688)"/>
                 <label>Ciudad de residencia <span class="requerido">*</span></label>
                     <input type="text" class="form-control" required />
                 <label>Nivel de estudios <span class="requerido">*</span></label>
-                    <select name="Nivel de estudios" required>
+                    <select name="Nivel de estudios" class="form-control" required>
                         <option value=""></option>
                         <option value="1">Primario</option>
                         <option value="2">Secundario</option>
@@ -53,7 +57,7 @@
                         <option value="4">Universitario</option>
                     </select>
             </aside>
-            <aside class="col-sm-12 col-md-4 bg-white">
+            <aside class="col-sm-12 col-md-6 col-lg-4">
                 <label>Experiencia laboral <span class="requerido">*</span></label><br>
                     <textarea class="textarea" cols="50" rows="5" required resize></textarea><br>
                 <label>Contanos qué sabes hacer y qué te gustaría hacer con nosotros <span class="requerido">*</span></label><br>
@@ -61,7 +65,7 @@
                 <input type="reset" value="Reset">
                 <input type="submit" value="Enviar"><br>
             </aside>
-            <aside class="col-sm-12 col-md-4">
+            <aside class="col-sm-12 col-md-6 col-lg-4">
                             <img src="/multimedia/img/trabajaconnosotros/trabajaconnosotros01.png" alt="personal de la empresa">
             </aside>
         </div>      
