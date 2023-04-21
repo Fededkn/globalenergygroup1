@@ -1,4 +1,31 @@
-< Agrege el normalize.css
-< No se puede colocar width y heigth a los elementos en linea.
-< border-radius: 10px
-< 
+Modificar HEADER completo.
+
+Imagenes
+
+  Ver documentación sobre atributos para imágenes, corregirlas.
+  
+Staff
+
+  Volver a hacer sección Staff.
+  
+Carrusel
+
+  Nosotros - Ahorro predictivo - Trabaja con nosotros
+  NO ME QUEDA BIEN xjkiasuxasjli _ ver videos guardados youtube.
+  
+Grid System - 
+
+  Ver videos - Dejar prolijo.
+  
+@media - 
+
+  Buscar info para mejorar responsive de Nosotros.
+  
+  
+  
+  
+  --------------------------------------------------------------
+  Llamar
+    Matías para material.
+    Guada informes de dos semanas.
+    Diego para logo.
