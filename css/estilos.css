@@ -20,17 +20,20 @@ body {
     /* min-height: 100vh; */
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: center;
     background-color: #fbfbfb;
 }
 
 .main {
     height: auto;
-    width: 100%;
+    /* width: 100%; */
+    width: 1170px;
     background-size: cover;
     padding: 0px 20px 10px 0px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
+
 }
 
 .nosotros {
@@ -49,38 +52,31 @@ body {
     height: auto;
 }
 
-.cont1 {
+.cont{
+    display: flex;
     justify-self: stretch;
     align-self: stretch;
-    grid-area: cont1;
-    background-color: rgb(218, 44, 44);
-    height: 420px;
     width: 100%;
-    display: flex;
+    height: 400px;
     background-size: cover;
     background-position: center;
+    box-shadow: 10px rgba(40, 40, 80, 0.1);
+    /* border: 1px solid #33333315; */
+    padding: 10px;
+}
+.cont1 {
+    grid-area: cont1;
+    height: 400px;
+    /* background-color: rgb(218, 44, 44); */
+    padding: 10px;
+
 }
 
 .cont2 {
-    justify-self: stretch;
-    align-self: stretch;
     grid-area: cont2;
-    height: 420px;
-    width: 100%;
-    padding: 20px;
-    background-color: rgb(180, 115, 71);
-}
-
-.anclaje1 {
-    grid-area: anclaje1;
-    /* background-color: #c32739; */
-    width: 100%;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* opacity: 0.90; */
-    font-size: 18px;
+    /* background-color: rgb(180, 115, 71); */
+    padding: 10px;
 }
 
 .clientes {
@@ -99,28 +95,19 @@ body {
 }
 
 .cont3 {
-    justify-self: stretch;
-    align-self: stretch;
-    grid-area: cont3;
-    background-color: rgb(93, 44, 218);
-    height: 420px;
-    width: auto;
     display: flex;
-    background-size: contain;
-    background-position: center;
+    justify-content: center;
+    grid-area: cont3;
+    /* background-color: rgb(93, 44, 218); */
 }
 
 .cont4 {
-    justify-self: stretch;
-    align-self: stretch;
     grid-area: cont4;
-    height: 420px;
-    width: auto;
-    background-color: rgb(46, 200, 200);
+    /* background-color: rgb(46, 200, 200); */
+    padding: 10px;
 }
 
-.anclaje2 {
-    grid-area: anclaje2;
+.anclaje{
     /* background-color: #c32739; */
     width: 100%;
     display: flex;
@@ -129,6 +116,19 @@ body {
     justify-content: center;
     /* opacity: 0.90; */
     font-size: 18px;
+}
+
+.anclaje1 {
+    grid-area: anclaje1;
+
+}
+
+.anclaje2 {
+    grid-area: anclaje2;
+}
+
+img{
+    border-radius: 1%;
 }
 
 @media only screen and (max-width: 320px) {
@@ -148,15 +148,6 @@ body {
         align-items: stretch;
         background-color: rgb(0, 0, 0);
     }
-
-    .cont1 {
-        grid-area: cont1;
-    }
-
-    .cont2 {
-        grid-area: cont2;
-    }
-
     .clientes {
         display: grid;
         margin-top: 10px;
@@ -191,15 +182,6 @@ body {
         align-items: stretch;
         background-color: rgb(0, 0, 0);
     }
-
-    .cont1 {
-        grid-area: cont1;
-    }
-
-    .cont2 {
-        grid-area: cont2;
-    }
-
     .clientes {
         display: grid;
         margin-top: 10px;
@@ -234,15 +216,6 @@ body {
         justify-items: stretch;
         align-items: stretch;
     }
-
-    .cont1 {
-        grid-area: cont1;
-    }
-
-    .cont2 {
-        grid-area: cont2;
-    }
-
     .clientes {
         display: grid;
         margin-top: 10px;
@@ -269,8 +242,14 @@ body {
     }
 }
 
+@media only screen and (max-width: 1143px) {
+    .img-trabajaConNosotros{
+        display: none;
+    }
+}
+
 #footer {
-    width: 100%;
+    width: 100vw;
     background-color: #528749;
     color: white;
     font-size: 20px;
@@ -278,6 +257,7 @@ body {
     padding: 20px;
     /* align-items: end; */
     /* align-content: end; */
+    height: 100px;
 }
 
 .redesFooter i {
@@ -323,10 +303,11 @@ a:hover {
 
 #header {
     width: 100%;
-    height: 150px;
+    height: 130px;
     font-size: 22px;
     padding: 20px;
-    background-color: #fbfbfb;
+    /* background-color: #fbfbfb; */
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -335,7 +316,8 @@ a:hover {
 .tituloHeader {
     height: auto;
     width: auto;
-    color: black 100px;
+    /* color: black 100px; */
+    color: white;
     font-size: 22px;
     font-family: sans-serif;
 }
@@ -346,9 +328,9 @@ a:hover {
     width: 100%;
     height: 70px;
     border-radius: 5px;
-    /* margin: auto;
-    justify-content: center; */
-    align-content: normal;
+    /* margin: auto;*/
+    justify-items: baseline;
+    /* align-content: normal; */
     box-shadow: 0px 20px 60px 0px rgba(40, 40, 80, 0.1)
 }
 
@@ -356,8 +338,8 @@ a:hover {
     display: flex;
     width: 100%;
     list-style: none;
-    list-style-type: none;
     justify-content: space-around;
+    list-style-type: none;
 }
 
 .navegacionHeader li {
@@ -404,6 +386,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .boxWebmail {
