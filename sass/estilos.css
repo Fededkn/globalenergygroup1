@@ -167,7 +167,6 @@ a:hover {
 #header {
   height: 150px;
   width: 1170px;
-  font-size: 18px;
   padding: 0px 20px 0px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -185,6 +184,10 @@ a:hover {
 #header .logo img {
   height: 70px;
   width: 70px;
+}
+
+h1 {
+  font-size: 25px;
 }
 
 .textoGeneral {
