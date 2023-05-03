@@ -1,4 +1,21 @@
+@font-face {
+    font-family: ghotamMedium;
+    src: url(../font/gothamMedium.ttf);
+}
+
 $colorPrincipal: #030f27;
+
+@mixin cardImg {
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin sizes ($width, $height, $bgcolor) {
+    width: $width;
+    height: $height;
+    background-color: $bgcolor;
+}
 
 * {
     margin: 0;
@@ -6,10 +23,6 @@ $colorPrincipal: #030f27;
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: ghotamMedium;
-    src: url(../font/gothamMedium.ttf);
-}
 
 html {
     scroll-behavior: smooth;
@@ -32,9 +45,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5px;
-    justify-content: center;
 }
 
+// NOSOTROS INICIO
 .nosotros {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -49,31 +62,27 @@ body {
         "anclaje1 anclaje1";
     width: 100%;
     height: auto;
+
+    .cont1 {
+        grid-area: cont1;
+        // justify-content: center;
+    }
+
+    .cont2 {
+        grid-area: cont2;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .anclaje1 {
+        grid-area: anclaje1;
+    }
 }
 
-.cont{
-    display: flex;
-    justify-self: stretch;
-    align-self: stretch;
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 10px rgba(40, 40, 80, 0.1);
-}
 
-.cont1 {
-    grid-area: cont1;
-    justify-content: center;
+//NOSOTROS FIN
 
-}
-
-.cont2 {
-    grid-area: cont2;
-    flex-direction: column;
-    padding: 10px;
-}
-
+//CLIENTES INICIO
 .clientes {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -88,22 +97,37 @@ body {
         "anclaje2 anclaje2";
     width: 100%;
     margin-top: 30px;
-}
 
-.cont3 {
+    .cont3 {
+        display: flex;
+        justify-content: center;
+        grid-area: cont3;
+    }
+
+    .cont4 {
+        grid-area: cont4;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .anclaje2 {
+        grid-area: anclaje2;
+    }
+}
+//CLIENTES FIN
+
+.cont {
     display: flex;
-    justify-content: center;
-    grid-area: cont3;
+    justify-self: stretch;
+    align-self: stretch;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px rgba(40, 40, 80, 0.1);
 }
 
-.cont4 {
-    grid-area: cont4;
-    flex-direction: column;
-    padding: 10px;
-
-}
-
-.anclaje{
+.anclaje {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -116,15 +140,7 @@ body {
     }
 }
 
-.anclaje1 {
-    grid-area: anclaje1;
-
-}
-
-.anclaje2 {
-    grid-area: anclaje2;
-}
-
+//FOOTER INCIO
 #footer {
     width: 100vw;
     width: 1170px;
@@ -134,59 +150,63 @@ body {
     text-align: center;
     padding: 20px 0px 0px 0px;
     height: auto;
+
+    .redesFooter {
+        & i {
+            font-size: 30px;
+            margin-bottom: 20px;
+            letter-spacing: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        & i:hover {
+            color: #333;
+        }
+    }
 }
 
-.redesFooter{
-    & i {
-        font-size: 30px;
-        margin-bottom: 20px;
-        letter-spacing: 15px;
-        color: white;
-        text-align: center;
+//FOOTER FIN
+
+a {
+    & :link {
+        text-decoration: none;
     }
 
-    & i:hover {
-        color: #333;
+    & :visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    & :hover {
+        text-decoration: underline;
     }
 }
 
-.ahorropredictivo {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2.2fr 0.3fr;
-    gap: 0px 20px;
-    grid-auto-flow: row;
-    justify-content: stretch;
-    justify-items: stretch;
-    align-items: stretch;
-    grid-template-areas:
-        "cont1 cont2"
-        "anclaje1 anclaje1";
-    width: 100%;
-    height: auto;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+//HEADER INCIO
 #header {
     height: 150px;
     width: 1170px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
 
     & .logo {
         height: 70px;
@@ -196,7 +216,7 @@ a:hover {
         display: flex;
         justify-content: left;
 
-        & img{
+        & img {
             height: 70px;
             width: 70px;
         }
@@ -218,31 +238,41 @@ h1 {
     resize: none;
 }
 
+.tituloPrincipal{
+    width: auto;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
 .requerido {
     color: red;
 }
 
+//WEBMAIL INICIO
 #bodyWebmail {
     background-image: url(../multimedia/img/webmail/background.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
 
-.boxWebmail {
-    background-position-y: center;
-    background-repeat: no-repeat;
-}
+    .boxWebmail {
+        background-position-y: center;
+        background-repeat: no-repeat;
+    }
 
-.botonWebmail {
-    display: flex;
-    height: 418px;
-    width: 100%;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
+    .botonWebmail {
+        display: flex;
+        height: 418px;
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
 }
+//WEBMAIL FIN
 
+//CONTACTO INICIO
 .mapaContacto {
     width: 100%;
     display: flex;
@@ -252,6 +282,11 @@ h1 {
 .formularioContacto {
     display: flex;
     padding: 20px 20px 0px;
+}
+
+.género {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .redesContacto {
@@ -266,60 +301,63 @@ h1 {
         color: black;
     }
 }
+//CONTACTO FIN
 
-.género {
-    display: flex;
-    justify-content: space-evenly;
-}
-
+//BOOTSTRAP INICIO
+//nav inicio
 .navbar {
     width: 100%;
     display: flex;
     border-radius: 5px;
     background-color: $colorPrincipal;
     justify-content: right;
-    box-shadow: 0px 20px 60px 0px rgba(40, 40, 80, 0.13)
+    box-shadow: 0px 20px 60px 0px rgba(40, 40, 80, 0.13);
+
+    .navbar-dark .navbar-toggler {
+        border-style: none;
+    }
+
+    .navbar-collapse {
+        justify-content: space-evenly;
+    }
+
+    .nav-item {
+        margin-right: 20px;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: hsla(0, 100%, 100%, 0.95);
+    }
 }
 
-.navbar-dark .navbar-toggler {
-    border-style: none;
-}
-
-.navbar-collapse {
-    justify-content: space-evenly;
-}
-
-.nav-item{
-    margin-right: 20px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: hsla(0, 100%, 100%, 0.95);
-}
-
-.carouselNosotros img{
+//nav fin
+//carrousel inicio
+.carouselNosotros img {
     height: 400px;
-}
 
-.carousel ul li{
-    height: 20px;
-    width: 20px;
-    background-color: $colorPrincipal;
-    border-radius: 100%;
-    opacity: 0.9;
-    margin-left: 30px;
-}
+    .carousel ul li {
+        height: 20px;
+        width: 20px;
+        background-color: $colorPrincipal;
+        border-radius: 100%;
+        opacity: 0.9;
+        margin-left: 30px;
+    }
 
-.carousel-control-prev span{
-    height: 30px;
-    width: 30px;
-    background-color: $colorPrincipal;
-    border-radius: 50%;
-    opacity: 1;
-    padding: 10px;
+    .carousel-control-prev span {
+        height: 30px;
+        width: 30px;
+        background-color: $colorPrincipal;
+        border-radius: 50%;
+        opacity: 1;
+        padding: 10px;
+    }
 }
+//carrousel fin
+//BOOTSTRAP FIN
 
-.staff{
+//STAFF INICIO
+.staff {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -327,94 +365,94 @@ h1 {
         "card1 card2 card3"
         "card4 card5 card6";
     gap: 50px 100px;
-    margin-top: 30px;
+    margin-top: 50px;
+}
+.main-staff{
+    justify-content: center;
+    margin-top: 15px;
 }
 
-.card-nombres{
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-}
-
-.card-texto{
-    text-align: center;
-    color: #fff;
-    font-size: 15px;
-}
-
-.card{
-    height: 300px;
-    width: 200px;
-    background-color: $colorPrincipal;
+//card staff inicio
+.card {
+    @include sizes(200px, 300px, $colorPrincipal);
     border: 3px solid #333;
-}
 
-.card1{
-    grid-area: card1;
-}
+    .card-nombres {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+    }
 
-.card-img1{
-    background-image: url(../multimedia/img/staff/cat1.jpg);
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-}
+    .card-texto {
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+    }
 
-.card2{
-    grid-area: card2;
-}
+    //CARD STAFF GRID AREA INICIO
+    .card1 {
+        grid-area: card1;
+    }
 
-.card-img2{
-    background-image: url(../multimedia/img/staff/cat2.jpg);
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-}
+    .card2 {
+        grid-area: card2;
+    }
 
-.card3{
-    grid-area: card3;
-}
+    .card3 {
+        grid-area: card3;
+    }
 
-.card-img3{
-    background-image: url(../multimedia/img/staff/cat3.jpg);
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-}
+    .card4 {
+        grid-area: card4;
+    }
 
-.card4{
-    grid-area: card4;
-}
+    .card5 {
+        grid-area: card5;
+    }
 
-.card-img4{
-    background-image: url(../multimedia/img/staff/cat4.jpg);
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-}
-.card5{
-    grid-area: card5;
-}
+    .card6 {
+        grid-area: card6;
+    }
 
-.card-img5{
-    background-image: url(../multimedia/img/staff/cat5.jpg);
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-}
+    //CARD STAFF GRID AREA FIN
 
-.card6{
-    grid-area: card6;
-}
+    //CARD STAFF IMG INICIO
+    .card-img1 {
+        background-image: url(../multimedia/img/staff/cat1.jpg);
+        @include cardImg;
+    }
 
-.card-img6{
-    background-image: url(../multimedia/img/staff/cat6.jpg);
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-}
+    .card-img2 {
+        background-image: url(../multimedia/img/staff/cat2.jpg);
+        @include cardImg;
+    }
 
-.ventajas{
+    .card-img3 {
+        background-image: url(../multimedia/img/staff/cat3.jpg);
+        @include cardImg;
+    }
+
+    .card-img4 {
+        background-image: url(../multimedia/img/staff/cat4.jpg);
+        @include cardImg;
+    }
+
+    .card-img5 {
+        background-image: url(../multimedia/img/staff/cat5.jpg);
+        @include cardImg;
+    }
+
+    .card-img6 {
+        background-image: url(../multimedia/img/staff/cat6.jpg);
+        @include cardImg;
+    }
+    //CARD STAFF IMG FIN
+}
+//card staff fin
+//STAFF FUN
+
+//VENTAJAS INICIO
+.ventajas {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2.2fr 0.3fr;
@@ -424,54 +462,48 @@ h1 {
     gap: 0px 80px;
     margin-top: 30px;
     height: 600px;
-}
 
-.cardV{
-    height: 500px;
-    width: 400px;
-    background-color: $colorPrincipal;
-    border: 3px solid #333;
-}
+    .cont5 {
+        grid-area: cont5;
+    }
 
-.cardV-texto{
-    text-align: left;
-    color: #fff;
-    font-size: 15px;
-    padding: 10px 0px 0px 20px;
-}
+    .cont6 {
+        grid-area: cont6;
+    }
 
-.cont5{
-    grid-area: cont5;
-}
+    .cont5-img {
+        background-image: url(../multimedia/img/ahorropredictivo/ventajasOperativas01.png);
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        grid-area: cont5;
+    }
 
-.cont6{
-    grid-area: cont6;
+    .cont6-img {
+        background-image: url(../multimedia/img/ahorropredictivo/ventajasCostos01.png);
+        height: 200px;
+        background-size: contain;
+        background-position: center;
+        grid-area: cont6;
+    }
 }
+//VENTAJAS FIN
 
-.cont5-img{
-    background-image: url(../multimedia/img/ahorropredictivo/ventajasOperativas01.png);
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    grid-area: cont5;
+//TRABAJA CON NOSOTROS INICIO
+.trabajaConNosotros{
+    margin-top: 15px;
 }
+//TRABAJA CON NOSOTROS FIN
 
-.cont6-img{
-    background-image: url(../multimedia/img/ahorropredictivo/ventajasCostos01.png);
-    height: 200px;
-    background-size: contain;
-    background-position: center;
-    grid-area: cont6;
-}
 
-@media only screen and (max-width: 446px){
-    .main-trabajaConNosotros{
+@media only screen and (max-width: 446px) {
+    .main-trabajaConNosotros {
         display: flex;
-    }    
+    }
 }
 
 @media only screen and (max-width: 900px) {
-    .staff{
+    .staff {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -482,45 +514,56 @@ h1 {
         gap: 50px 100px;
         margin-top: 30px;
     }
+
     .nosotros {
         display: flex;
         flex-direction: column;
     }
+
     .clientes {
         display: flex;
         flex-direction: column;
     }
-    .cont{
+
+    .cont {
         height: auto;
     }
-    .cont2{
+
+    .cont2 {
         margin-top: 5px;
     }
+
     .anclaje1 {
         display: none;
     }
+
     .anclaje2 {
         display: none;
     }
 }
-@media only screen and (max-width: 1109px){
-    .cont2{
+
+@media only screen and (max-width: 1109px) {
+    .cont2 {
         overflow: auto;
     }
-    .cont4{
+
+    .cont4 {
         overflow: auto;
     }
 }
+
 @media only screen and (max-width: 1190px) {
-    .img-trabajaConNosotros{
+    .img-trabajaConNosotros {
         display: none;
     }
-    .main-trabajaConNosotros{
+
+    .main-trabajaConNosotros {
         justify-content: center;
     }
 }
-@media only screen and (max-width: 545px){
-    .staff{
+
+@media only screen and (max-width: 545px) {
+    .staff {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -533,5 +576,5 @@ h1 {
             "card6";
         gap: 50px 100px;
         margin-top: 30px;
-    }    
+    }
 }
