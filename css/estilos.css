@@ -26,14 +26,13 @@ body {
 
 .main {
     height: auto;
-    /* width: 100%; */
     width: 1170px;
     background-size: cover;
     padding: 0px 20px 10px 20px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 5px;
-
+    justify-content: center;
 }
 
 .nosotros {
@@ -61,9 +60,8 @@ body {
     background-size: cover;
     background-position: center;
     box-shadow: 10px rgba(40, 40, 80, 0.1);
-    /* border: 1px solid #33333315; */
-    /* padding: 10px; */
 }
+
 .cont1 {
     grid-area: cont1;
     justify-content: center;
@@ -132,53 +130,9 @@ img{
     border-radius: 1%;
 }
 
-@media only screen and (max-width: 700px){
-    
-
-}
-
-@media only screen and (max-width: 900px) {
-
-    .nosotros {
-        display: flex;
-        flex-direction: column;
-    }
-    .clientes {
-        display: flex;
-        flex-direction: column;
-    }
-    .cont{
-        height: auto;
-    }
-    .cont2{
-        margin-top: 5px;
-    }
-    .anclaje1 {
-        display: none;
-    }
-
-    .anclaje2 {
-        display: none;
-    }
-}
-@media only screen and (max-width: 1109px){
-    .cont2{
-        overflow: auto;
-    }
-    .cont4{
-        overflow: auto;
-    }
-
-}
-
-@media only screen and (max-width: 1143px) {
-    .img-trabajaConNosotros{
-        display: none;
-    }
-}
-
 #footer {
     width: 100vw;
+    width: 1170px;
     background-color: #030f27;
     color: white;
     font-size: 18px;
@@ -274,29 +228,23 @@ h1 {
 
 #bodyWebmail {
     background-image: url(../multimedia/img/webmail/background.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-position: center;
 }
 
 .boxWebmail {
-    display: flex;
-    justify-content: center;
-    padding: 155px;
+    background-position-y: center;
+    background-repeat: no-repeat;
 }
 
 .botonWebmail {
     display: flex;
-    height: auto;
+    height: 418px;
     width: 100%;
-    border: 1px solid gray;
-    background-color: azure;
+    padding: 20px;
     justify-content: center;
-    /* padding: 15px;
-    opacity: 0.7; */
+    align-items: center;
 }
 
 .anclaje:hover {
@@ -323,6 +271,7 @@ h1 {
     padding: 20px;
     flex-direction: column;
     justify-content: baseline;
+    width: 670px;
 }
 
 .redesContacto li {
@@ -361,17 +310,221 @@ h1 {
 .navbar-dark .navbar-nav .nav-link {
     color: hsla(0, 100%, 100%, 0.95);
 }
+.carouselNosotros img{
+    height: 400px;
+}
+.carousel ul li{
+    height: 20px;
+    width: 20px;
+    background-color: #030f27;
+    border-radius: 100%;
+    opacity: 0.9;
+    margin-left: 30px;
+}
 
+.carousel-control-prev span{
+    height: 30px;
+    width: 30px;
+    background-color: #030f27;
+    border-radius: 50%;
+    opacity: 1;
+    padding: 10px;
+}
 
-/* #header {
-    width: 100%;
-    height: 130px;
-    font-size: 18px;
-    padding: 20px;
-    /* background-color: #fbfbfb; */
-    /* background-color: rgb(0, 0, 0); */
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-} */
+.staff{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6";
+    gap: 50px 100px;
+    margin-top: 30px;
+}
+
+.card-nombres{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+.card-texto{
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+.card{
+    height: 300px;
+    width: 200px;
+    background-color: #030f27;
+    border: 3px solid #333;
+}
+.card1{
+    grid-area: card1;
+}
+.card-img1{
+    background-image: url(../multimedia/img/staff/cat1.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+.card2{
+    grid-area: card2;
+}
+.card-img2{
+    background-image: url(../multimedia/img/staff/cat2.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+.card3{
+    grid-area: card3;
+}
+.card-img3{
+    background-image: url(../multimedia/img/staff/cat3.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+.card4{
+    grid-area: card4;
+}
+.card-img4{
+    background-image: url(../multimedia/img/staff/cat4.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+.card5{
+    grid-area: card5;
+}
+.card-img5{
+    background-image: url(../multimedia/img/staff/cat5.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+.card6{
+    grid-area: card6;
+}
+.card-img6{
+    background-image: url(../multimedia/img/staff/cat6.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+
+.ventajas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2.2fr 0.3fr;
+    grid-template-areas:
+        "cont5 cont6"
+        "anclaje2 anclaje2";
+    gap: 0px 80px;
+    margin-top: 30px;
+    height: 600px;
+}
+.cardV{
+    height: 500px;
+    width: 400px;
+    background-color: #030f27;
+    border: 3px solid #333;
+}
+.cardV-texto{
+    text-align: left;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 0px 0px 20px;
+}
+.cont5{
+    grid-area: cont5;
+}
+.cont6{
+    grid-area: cont6;
+}
+.cont5-img{
+    background-image: url(../multimedia/img/staff/cat3.jpg);
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    grid-area: cont5;
+}
+.cont6-img{
+    background-image: url(../multimedia/img/staff/cat3.jpg);
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    grid-area: cont6;
+}
+
+@media only screen and (max-width: 446px){
+    .main-trabajaConNosotros{
+        display: flex;
+    }    
+}
+
+@media only screen and (max-width: 900px) {
+    .staff{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6";
+        gap: 50px 100px;
+        margin-top: 30px;
+    }
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+    }
+    .clientes {
+        display: flex;
+        flex-direction: column;
+    }
+    .cont{
+        height: auto;
+    }
+    .cont2{
+        margin-top: 5px;
+    }
+    .anclaje1 {
+        display: none;
+    }
+    .anclaje2 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1109px){
+    .cont2{
+        overflow: auto;
+    }
+    .cont4{
+        overflow: auto;
+    }
+}
+@media only screen and (max-width: 1190px) {
+    .img-trabajaConNosotros{
+        display: none;
+    }
+    .main-trabajaConNosotros{
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 545px){
+    .staff{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6";
+        gap: 50px 100px;
+        margin-top: 30px;
+    }    
+}
