@@ -13,13 +13,17 @@
     <link rel="stylesheet" href="../sass/estilos.css">
     <title>Trabaja con nosotros</title>
 </head>
-<body class="body-trabajaConNosotros container-fluid">
+<body>
     <!-- HEADER INICIO -->
     <header id="header">
         <!-- LOGO INICIO-->
         <span class="logo">
             <img src="../multimedia/img/logos/faviconGEGblanco.png" alt="">
-        </span><br>
+            <h6 class="logoTexto">Global <br>
+                Energy <br>
+                Group S.A. <br>
+            </h6>
+        </span>
         <!-- LOGO FIN-->
         <!-- NAV BAR INICIO-->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -61,9 +65,10 @@
         <div class="tituloPrincipal">
             <h1>Trabaja con nosotros</h1>
         </div>
+        <hr>
         <div class="trabajaConNosotros row">
             <!-- COLUMNA FORM 1 INICIO -->
-            <aside class="col-trabajaConNosotros1 col-sm-12 col-md-6 col-lg-4">
+            <aside class="col-sm-12 col-md-6 col-lg-4">
                 <form method="post" class="form-group">
                     <label>Nombre<span class="requerido">*</span></label>
                     <input type="text" class="form-control" required />
@@ -100,13 +105,17 @@
                 <label>Contanos qué sabes hacer y qué te gustaría hacer con nosotros <span
                         class="requerido">*</span></label><br>
                 <textarea class="textarea" cols="50" rows="5" required resize></textarea><br>
-                <input type="reset" value="Reset">
-                <input type="submit" value="Enviar"><br>
+                <div class="botonTrabajaConNosotros">
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                </div>
+                
             </aside>
             <!-- COLUMNA FORM 2 FIN -->
             <!-- CARRUSEL INICIO -->
             <aside class="img-trabajaConNosotros col-sm-12 col-md-6 col-lg-4">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleSlidesOnly" class="carousel slide slideTrabajaConNosotros" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="../multimedia/img/trabajaconnosotros/trabajaconnosotros01.png" class="d-block w-100" alt="Imagen de personal">
@@ -120,6 +129,7 @@
             <!-- CARRUSEL FIN -->
         </div>
     </main>
+    <!-- MAIN FIN -->
     <!-- FOOTER INICIO -->
     <footer id="footer">
         <div target=_blank class="redesFooter">

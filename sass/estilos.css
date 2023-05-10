@@ -29,7 +29,63 @@ body {
   padding: 0px 20px 10px 20px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5px;
+  margin-top: 12px;
+  animation-duration: 1.2s;
+  animation-name: aparecer;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#header {
+  height: 150px;
+  width: 1170px;
+  padding: 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 1s;
+  animation-name: aparecerHeader;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+@keyframes aparecerHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#header .logo {
+  height: 70px;
+  width: 100%;
+  font-size: 18px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: left;
+  margin-top: 6px;
+}
+#header .logo img {
+  height: 70px;
+  width: 70px;
+}
+#header .logoTexto {
+  height: auto;
+  font-size: 13px;
+  margin: 13px 0px 0px 8px;
+  line-height: normal;
+  font-family: ghotamMedium;
 }
 
 .nosotros {
@@ -51,10 +107,75 @@ body {
 .nosotros .cont2 {
   grid-area: cont2;
   flex-direction: column;
-  padding: 10px;
+  padding: 0px 10px 0px 0px;
+  line-height: 1.3;
 }
 .nosotros .anclaje1 {
   grid-area: anclaje1;
+}
+
+.ahorroPredictivo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2.2fr 0.3fr;
+  gap: 0px 20px;
+  grid-auto-flow: row;
+  justify-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas: "cont5 cont6" "anclaje3 anclaje3";
+  width: 100%;
+  height: auto;
+}
+.ahorroPredictivo .cont5 {
+  grid-area: cont5;
+}
+.ahorroPredictivo .cont6 {
+  grid-area: cont6;
+  flex-direction: column;
+  padding: 0px 10px 0px 0px;
+  line-height: 1.3;
+  height: auto;
+}
+.ahorroPredictivo .anclaje3 {
+  grid-area: anclaje3;
+}
+
+.ventajas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2.2fr 0.3fr;
+  grid-template-areas: "cont7 cont8" "anclaje4 anclaje4";
+  gap: 0px 80px;
+  margin-top: 30px;
+  width: 100%;
+}
+.ventajas ul {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+.ventajas .cont7 {
+  grid-area: cont7;
+}
+.ventajas .cont8 {
+  grid-area: cont8;
+}
+.ventajas .cont7-img {
+  background-image: url(../multimedia/img/ahorropredictivo/ventajasOperativas1.png);
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  grid-area: cont7;
+}
+.ventajas .cont8-img {
+  background-image: url(../multimedia/img/ahorropredictivo/ventajasCostos1.png);
+  height: 170px;
+  background-size: contain;
+  background-position: center;
+  grid-area: cont8;
+}
+.ventajas .anclaje4 {
+  grid-area: anclaje4;
 }
 
 .clientes {
@@ -79,212 +200,15 @@ body {
   grid-area: cont4;
   flex-direction: column;
   padding: 10px;
+  line-height: 1.3;
 }
 .clientes .anclaje2 {
   grid-area: anclaje2;
 }
 
-.cont {
-  display: flex;
-  justify-self: stretch;
-  align-self: stretch;
-  width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 10px rgba(40, 40, 80, 0.1);
-}
-
-.anclaje {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.main-staff {
   justify-content: center;
-  font-size: 18px;
-}
-.anclaje :hover {
-  color: #333;
-}
-
-#footer {
-  width: 100vw;
-  width: 1170px;
-  background-color: #030f27;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  padding: 20px 0px 0px 0px;
-  height: auto;
-}
-#footer .redesFooter i {
-  font-size: 30px;
-  margin-bottom: 20px;
-  letter-spacing: 15px;
-  color: white;
-  text-align: center;
-}
-#footer .redesFooter i:hover {
-  color: #333;
-}
-
-a :link {
-  text-decoration: none;
-}
-a :visited {
-  text-decoration: none;
-  color: black;
-}
-a :hover {
-  text-decoration: underline;
-}
-
-#header {
-  height: 150px;
-  width: 1170px;
-  padding: 0px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  animation-duration: 3s;
-  animation-name: aparecer;
-  animation-delay: 0s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-}
-@keyframes aparecer {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#header .logo {
-  height: 70px;
-  width: 100%;
-  font-size: 18px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: left;
-}
-#header .logo img {
-  height: 70px;
-  width: 70px;
-}
-
-h1 {
-  font-size: 25px;
-}
-
-.textoGeneral {
-  color: black;
-  font-size: 16px;
-  text-align: justify;
-}
-
-.textarea {
-  resize: none;
-}
-
-.tituloPrincipal {
-  width: auto;
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-}
-
-.requerido {
-  color: red;
-}
-
-#bodyWebmail {
-  background-image: url(../multimedia/img/webmail/background.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#bodyWebmail .boxWebmail {
-  background-position-y: center;
-  background-repeat: no-repeat;
-}
-#bodyWebmail .botonWebmail {
-  display: flex;
-  height: 418px;
-  width: 100%;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.mapaContacto {
-  width: 100%;
-  display: flex;
-  padding: 20px 20px 0px;
-}
-
-.formularioContacto {
-  display: flex;
-  padding: 20px 20px 0px;
-}
-
-.género {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.redesContacto {
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  justify-content: baseline;
-  width: 670px;
-}
-.redesContacto li {
-  list-style: none;
-  color: black;
-}
-
-.navbar {
-  width: 100%;
-  display: flex;
-  border-radius: 5px;
-  background-color: #030f27;
-  justify-content: right;
-  box-shadow: 0px 20px 60px 0px rgba(40, 40, 80, 0.13);
-}
-.navbar .navbar-dark .navbar-toggler {
-  border-style: none;
-}
-.navbar .navbar-collapse {
-  justify-content: space-evenly;
-}
-.navbar .nav-item {
-  margin-right: 20px;
-}
-.navbar .navbar-dark .navbar-nav .nav-link {
-  color: hsla(0, 100%, 100%, 0.95);
-}
-
-.carouselNosotros img {
-  height: 400px;
-}
-.carouselNosotros img .carousel ul li {
-  height: 20px;
-  width: 20px;
-  background-color: #030f27;
-  border-radius: 100%;
-  opacity: 0.9;
-  margin-left: 30px;
-}
-.carouselNosotros img .carousel-control-prev span {
-  height: 30px;
-  width: 30px;
-  background-color: #030f27;
-  border-radius: 50%;
-  opacity: 1;
-  padding: 10px;
+  margin-top: 15px;
 }
 
 .staff {
@@ -292,13 +216,8 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "card1 card2 card3" "card4 card5 card6";
-  gap: 50px 100px;
-  margin-top: 50px;
-}
-
-.main-staff {
-  justify-content: center;
-  margin-top: 15px;
+  gap: 50px 80px;
+  margin-top: 20px;
 }
 
 .card {
@@ -310,12 +229,14 @@ h1 {
 .card .card-nombres {
   text-align: center;
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .card .card-texto {
   text-align: center;
   color: #fff;
-  font-size: 15px;
+  font-size: 12px;
 }
 .card .card1 {
   grid-area: card1;
@@ -372,38 +293,206 @@ h1 {
   background-position: center;
 }
 
-.ventajas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2.2fr 0.3fr;
-  grid-template-areas: "cont5 cont6" "anclaje2 anclaje2";
-  gap: 0px 80px;
-  margin-top: 30px;
-  height: 600px;
-}
-.ventajas .cont5 {
-  grid-area: cont5;
-}
-.ventajas .cont6 {
-  grid-area: cont6;
-}
-.ventajas .cont5-img {
-  background-image: url(../multimedia/img/ahorropredictivo/ventajasOperativas01.png);
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  grid-area: cont5;
-}
-.ventajas .cont6-img {
-  background-image: url(../multimedia/img/ahorropredictivo/ventajasCostos01.png);
-  height: 200px;
-  background-size: contain;
-  background-position: center;
-  grid-area: cont6;
-}
-
 .trabajaConNosotros {
   margin-top: 15px;
+}
+
+.género {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.botonTrabajaConNosotros {
+  margin-top: 10px;
+}
+
+.contacto {
+  width: 100vw;
+}
+
+.mapaContacto {
+  width: 100%;
+  display: flex;
+  padding: 20px 20px 0px;
+}
+
+.formularioContacto {
+  display: flex;
+  padding: 20px 20px 0px 0px;
+}
+
+.redesContacto {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: baseline;
+  width: 670px;
+}
+.redesContacto li {
+  list-style: none;
+  color: black;
+}
+
+.boxWebmail {
+  background-image: url(../multimedia/img/webmail/background.jpg);
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
+}
+
+.botonWebmail {
+  display: flex;
+  height: 418px;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer {
+  width: 100vw;
+  background-color: #030f27;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0px 0px 0px;
+  height: auto;
+}
+#footer .redesFooter i {
+  font-size: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 15px;
+  color: white;
+  text-align: center;
+}
+#footer .redesFooter i:hover {
+  color: #333;
+}
+
+.cont {
+  display: flex;
+  justify-self: stretch;
+  align-self: stretch;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px rgba(40, 40, 80, 0.1);
+}
+
+.anclaje {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.anclaje h5 {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+.anclaje i {
+  font-size: 20px;
+  color: #030f27;
+}
+.anclaje :hover {
+  color: #333;
+}
+
+a {
+  color: black;
+}
+a :link {
+  text-decoration: none;
+}
+a :visited {
+  text-decoration: none;
+  color: black;
+}
+a :hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1, h2 {
+  margin-top: 10px;
+}
+
+.textoGeneral {
+  color: black;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.tituloPrincipal {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  height: auto;
+}
+
+hr {
+  border-top: 1px solid #030f27;
+  width: 100%;
+}
+
+.textarea {
+  resize: none;
+  width: 100%;
+}
+
+.requerido {
+  color: red;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  background-color: #030f27;
+  justify-content: right;
+  box-shadow: 0px 15px 20px 0px rgba(40, 40, 80, 0.13);
+}
+.navbar .navbar-dark .navbar-toggler {
+  border-style: none;
+}
+.navbar .navbar-collapse {
+  justify-content: space-evenly;
+}
+.navbar .nav-item {
+  margin-right: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+}
+
+.slideTrabajaConNosotros img {
+  border-radius: 5px;
+}
+
+.slideNosotros img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 400px;
+  width: 1000px;
+  border-radius: 8px;
+}
+
+.btn-light {
+  border: 1px solid black;
+  background-color: #030f27;
+  color: #fff;
 }
 
 @media only screen and (max-width: 446px) {
@@ -411,15 +500,29 @@ h1 {
     display: flex;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 500px) {
+  .staff {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 700) {
+  .contacto {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 800px) {
   .staff {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "card1 card2" "card3 card4" "card5 card6";
-    gap: 50px 100px;
+    gap: 50px 50px;
     margin-top: 30px;
   }
+}
+@media only screen and (max-width: 900px) {
   .nosotros {
     display: flex;
     flex-direction: column;
@@ -441,29 +544,43 @@ h1 {
     display: none;
   }
 }
+@media only screen and (max-width: 991px) {
+  .img-trabajaConNosotros {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1109px) {
   .cont2 {
+    overflow: auto;
+  }
+  .cont6 {
     overflow: auto;
   }
   .cont4 {
     overflow: auto;
   }
 }
-@media only screen and (max-width: 1190px) {
-  .img-trabajaConNosotros {
+@media only screen and (max-width: 1060px) {
+  .ahorroPredictivo {
+    display: flex;
+    flex-direction: column;
+  }
+  .ventajas {
+    display: flex;
+    flex-direction: column;
+  }
+  .ventajas .cont8 {
+    margin-top: 20px;
+  }
+  .anclaje3 {
     display: none;
   }
-  .main-trabajaConNosotros {
-    justify-content: center;
+  .anclaje4 {
+    display: none;
   }
 }
-@media only screen and (max-width: 545px) {
-  .staff {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6";
-    gap: 50px 100px;
-    margin-top: 30px;
+@media only screen and (max-width: 1190px) {
+  .main-trabajaConNosotros {
+    justify-content: center;
   }
 }/*# sourceMappingURL=estilos.css.map */
