@@ -20,6 +20,47 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow-x: hidden;
+}
+
+#header {
+  position: relative;
+  z-index: 2;
+  height: 150px;
+  width: 1170px;
+  padding: 0px 20px;
+  animation-duration: 1s;
+  animation-name: aparecerHeader;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+@keyframes aparecerHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#header .logo {
+  height: 70px;
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: left;
+  margin: 6px 0px 15px 0px;
+}
+#header .logo img {
+  height: 70px;
+  width: 70px;
+}
+#header .logoTexto {
+  height: 70px;
+  font-size: 13px;
+  margin: 13px 0px 0px 8px;
+  line-height: normal;
+  font-family: ghotamMedium;
 }
 
 .main {
@@ -43,49 +84,6 @@ body {
   to {
     opacity: 1;
   }
-}
-
-#header {
-  height: 150px;
-  width: 1170px;
-  padding: 0px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  animation-duration: 1s;
-  animation-name: aparecerHeader;
-  animation-delay: 0s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-}
-@keyframes aparecerHeader {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#header .logo {
-  height: 70px;
-  width: 100%;
-  font-size: 18px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: left;
-  margin-top: 6px;
-}
-#header .logo img {
-  height: 70px;
-  width: 70px;
-}
-#header .logoTexto {
-  height: auto;
-  font-size: 13px;
-  margin: 13px 0px 0px 8px;
-  line-height: normal;
-  font-family: ghotamMedium;
 }
 
 .nosotros {
@@ -112,6 +110,52 @@ body {
 }
 .nosotros .anclaje1 {
   grid-area: anclaje1;
+}
+
+.cont {
+  display: flex;
+  justify-self: stretch;
+  align-self: stretch;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px rgba(40, 40, 80, 0.1);
+}
+
+.anclaje {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.anclaje h5 {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+.anclaje i {
+  font-size: 20px;
+  color: #030f27;
+}
+.anclaje :hover {
+  color: #333;
+}
+
+a {
+  color: black;
+}
+a :link {
+  text-decoration: none;
+}
+a :visited {
+  text-decoration: none;
+  color: black;
+}
+a :hover {
+  text-decoration: none;
 }
 
 .ahorroPredictivo {
@@ -338,6 +382,7 @@ body {
   background-position-y: center;
   background-position-x: center;
   background-size: cover;
+  border-radius: 5px;
 }
 
 .botonWebmail {
@@ -352,14 +397,50 @@ body {
 #footer {
   width: 100vw;
   background-color: #030f27;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  padding: 20px 0px 0px 0px;
+  color: rgb(27, 19, 19);
+  padding: 8px 15px;
   height: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas: "logoFooter redesFooter navFooter";
+}
+#footer .logoFooter {
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logoFooter;
+}
+#footer .logoFooter img {
+  height: 70px;
+  width: 70px;
+}
+#footer .logoTextoFooter {
+  height: auto;
+  font-size: 13px;
+  margin: 0px 8px;
+  line-height: normal;
+  font-family: ghotamMedium;
+  color: white;
+}
+#footer .redesFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-area: redesFooter;
+}
+#footer .redesFooter span {
+  padding: 0%;
 }
 #footer .redesFooter i {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
   letter-spacing: 15px;
   color: white;
@@ -368,51 +449,31 @@ body {
 #footer .redesFooter i:hover {
   color: #333;
 }
-
-.cont {
-  display: flex;
-  justify-self: stretch;
-  align-self: stretch;
-  width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 10px rgba(40, 40, 80, 0.1);
+#footer .redesFooter p {
+  font-size: 10px;
+  margin: 0;
+  color: white;
 }
 
-.anclaje {
-  width: 100%;
+.navFooter {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: 12px;
-  margin-top: 4px;
+  width: 100%;
+  grid-area: navFooter;
+  position: relative;
+  z-index: 2;
 }
-.anclaje h5 {
-  margin-bottom: 1px;
-  margin-top: 1px;
+.navFooter ul {
+  margin: 0;
 }
-.anclaje i {
-  font-size: 20px;
-  color: #030f27;
+.navFooter li {
+  list-style: none;
 }
-.anclaje :hover {
-  color: #333;
-}
-
-a {
-  color: black;
-}
-a :link {
-  text-decoration: none;
-}
-a :visited {
-  text-decoration: none;
-  color: black;
-}
-a :hover {
-  text-decoration: none;
+.navFooter a {
+  color: white;
+  text-align: flex-start;
 }
 
 h1 {
@@ -462,6 +523,8 @@ hr {
   background-color: #030f27;
   justify-content: right;
   box-shadow: 0px 15px 20px 0px rgba(40, 40, 80, 0.13);
+  position: relative !important;
+  z-index: 50 !important;
 }
 .navbar .navbar-dark .navbar-toggler {
   border-style: none;
@@ -495,58 +558,9 @@ hr {
   color: #fff;
 }
 
-@media only screen and (max-width: 446px) {
+@media only screen and (max-width: 1190px) {
   .main-trabajaConNosotros {
-    display: flex;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .staff {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-@media only screen and (max-width: 700) {
-  .contacto {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .staff {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "card1 card2" "card3 card4" "card5 card6";
-    gap: 50px 50px;
-    margin-top: 30px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .nosotros {
-    display: flex;
-    flex-direction: column;
-  }
-  .clientes {
-    display: flex;
-    flex-direction: column;
-  }
-  .cont {
-    height: auto;
-  }
-  .cont2 {
-    margin-top: 5px;
-  }
-  .anclaje1 {
-    display: none;
-  }
-  .anclaje2 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .img-trabajaConNosotros {
-    display: none;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 1109px) {
@@ -579,8 +593,73 @@ hr {
     display: none;
   }
 }
-@media only screen and (max-width: 1190px) {
-  .main-trabajaConNosotros {
+@media only screen and (max-width: 991px) {
+  .img-trabajaConNosotros {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nosotros {
+    display: flex;
+    flex-direction: column;
+  }
+  .clientes {
+    display: flex;
+    flex-direction: column;
+  }
+  .cont {
+    height: auto;
+  }
+  .cont2 {
+    margin-top: 5px;
+  }
+  .anclaje1 {
+    display: none;
+  }
+  .anclaje2 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .staff {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "card1 card2" "card3 card4" "card5 card6";
+    gap: 50px 50px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logoFooter navFooter" "redesFooter navFooter";
+  }
+  #footer .redesFooter {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .staff {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6";
+    gap: 50px 50px;
+    margin-top: 30px;
+    height: auto;
+    width: 100px;
     justify-content: center;
+  }
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logoFooter" "redesFooter";
+  }
+  #footer .navFooter {
+    display: none;
   }
 }/*# sourceMappingURL=estilos.css.map */
