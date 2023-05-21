@@ -1,0 +1,20 @@
+//WEBMAIL INICIO
+
+.boxWebmail {
+    background-image: url(../multimedia/img/webmail/background.jpg);
+    background-position-y: center;
+    background-position-x: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.botonWebmail {
+    display: flex;
+    height: 418px;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+//WEBMAIL FIN

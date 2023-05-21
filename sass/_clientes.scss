@@ -1,0 +1,36 @@
+//CLIENTES INICIO
+
+.clientes {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 0.3fr;
+    gap: 5px 20px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+        "cont3 cont4"
+        "anclaje2 anclaje2";
+    width: 100%;
+    margin-top: 30px;
+
+    .cont3 {
+        display: flex;
+        justify-content: center;
+        grid-area: cont3;
+    }
+
+    .cont4 {
+        grid-area: cont4;
+        flex-direction: column;
+        padding: 10px;
+        line-height: 1.3;
+    }
+
+    .anclaje2 {
+        grid-area: anclaje2;
+    }
+}
+
+//CLIENTES FIN

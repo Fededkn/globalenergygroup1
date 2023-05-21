@@ -1,0 +1,35 @@
+//NOSOTROS INICIO
+
+.nosotros {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2.2fr 0.3fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+        "cont1 cont2"
+        "anclaje1 anclaje1";
+    width: 100%;
+    height: auto;
+
+    .cont1 {
+        grid-area: cont1;
+    }
+
+    .cont2 {
+        grid-area: cont2;
+        flex-direction: column;
+        padding: 0px 10px 0px 0px;
+        line-height: 1.3;
+    }
+
+    .anclaje1 {
+        grid-area: anclaje1;
+    }
+
+}
+
+//NOSOTROS FIN

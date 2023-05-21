@@ -1,0 +1,89 @@
+//AHORRO PREDICTIVO INICIO
+
+.ahorroPredictivo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2.2fr 0.3fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+        "cont5 cont6"
+        "anclaje3 anclaje3";
+    width: 100%;
+    height: auto;
+
+    .cont5 {
+        grid-area: cont5;
+    }
+
+    .cont6 {
+        grid-area: cont6;
+        flex-direction: column;
+        padding: 0px 10px 0px 0px;
+        line-height: 1.3;
+        height: auto;
+    }
+
+    .anclaje3 {
+        grid-area: anclaje3;
+    }
+}
+
+//ventajas inicio
+
+.ventajas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2.2fr 0.3fr;
+    grid-template-areas:
+        "cont7 cont8"
+        "anclaje4 anclaje4";
+    gap: 0px 80px;
+    margin-top: 30px;
+    width: 100%;
+
+    & ul {
+        margin-left: 20px;
+        margin-bottom: 0px;
+    }
+
+    .cont7 {
+        grid-area: cont7;
+    }
+
+    .cont8 {
+        grid-area: cont8;
+        }
+
+    .cont7-img {
+        background-image: url(../multimedia/img/ahorropredictivo/ventajasOperativas1.png);
+        height: 170px;
+        background-size: cover;
+        background-position: center;
+        grid-area: cont7;
+    }
+
+    .cont8-img {
+        background-image: url(../multimedia/img/ahorropredictivo/ventajasCostos1.png);
+        height: 170px;
+        background-size: contain;
+        background-position: center;
+        grid-area: cont8;
+    }
+    .anclaje4 {
+        grid-area: anclaje4;
+    }
+        .slideNosotros img {
+        object-fit: cover;
+        max-height: 400px;
+        width: 1000px;
+        border-radius: 8px;
+    }
+}
+
+//ventajas fin
+
+//AHORRO PREDICTIVO FIN

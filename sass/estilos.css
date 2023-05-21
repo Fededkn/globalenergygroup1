@@ -3,89 +3,6 @@
   font-family: ghotamMedium;
   src: url(../font/gothamMedium.ttf);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background-color: #fbfbfb;
-}
-
-body {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow-x: hidden;
-}
-
-#header {
-  position: relative;
-  z-index: 2;
-  height: 150px;
-  width: 1170px;
-  padding: 0px 20px;
-  animation-duration: 1s;
-  animation-name: aparecerHeader;
-  animation-delay: 0s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-}
-@keyframes aparecerHeader {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#header .logo {
-  height: 70px;
-  width: 100%;
-  font-size: 18px;
-  display: flex;
-  justify-content: left;
-  margin: 6px 0px 15px 0px;
-}
-#header .logo img {
-  height: 70px;
-  width: 70px;
-}
-#header .logoTexto {
-  height: 70px;
-  font-size: 13px;
-  margin: 13px 0px 0px 8px;
-  line-height: normal;
-  font-family: ghotamMedium;
-}
-
-.main {
-  height: auto;
-  width: 1170px;
-  background-size: cover;
-  padding: 0px 20px 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 12px;
-  animation-duration: 1.2s;
-  animation-name: aparecer;
-  animation-delay: 0s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-}
-@keyframes aparecer {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .nosotros {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -110,52 +27,6 @@ body {
 }
 .nosotros .anclaje1 {
   grid-area: anclaje1;
-}
-
-.cont {
-  display: flex;
-  justify-self: stretch;
-  align-self: stretch;
-  width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 10px rgba(40, 40, 80, 0.1);
-}
-
-.anclaje {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  margin-top: 4px;
-}
-.anclaje h5 {
-  margin-bottom: 1px;
-  margin-top: 1px;
-}
-.anclaje i {
-  font-size: 20px;
-  color: #030f27;
-}
-.anclaje :hover {
-  color: #333;
-}
-
-a {
-  color: black;
-}
-a :link {
-  text-decoration: none;
-}
-a :visited {
-  text-decoration: none;
-  color: black;
-}
-a :hover {
-  text-decoration: none;
 }
 
 .ahorroPredictivo {
@@ -221,6 +92,13 @@ a :hover {
 .ventajas .anclaje4 {
   grid-area: anclaje4;
 }
+.ventajas .slideNosotros img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 400px;
+  width: 1000px;
+  border-radius: 8px;
+}
 
 .clientes {
   display: grid;
@@ -248,11 +126,6 @@ a :hover {
 }
 .clientes .anclaje2 {
   grid-area: anclaje2;
-}
-
-.main-staff {
-  justify-content: center;
-  margin-top: 15px;
 }
 
 .staff {
@@ -337,10 +210,6 @@ a :hover {
   background-position: center;
 }
 
-.trabajaConNosotros {
-  margin-top: 15px;
-}
-
 .género {
   display: flex;
   justify-content: space-evenly;
@@ -350,8 +219,24 @@ a :hover {
   margin-top: 10px;
 }
 
-.contacto {
-  width: 100vw;
+.slideTrabajaConNosotros img {
+  border-radius: 5px;
+}
+
+.form-trabajaConNosotros {
+  padding: 20px 20px 0px 0px;
+}
+.form-trabajaConNosotros input {
+  margin: 0px 0px 20px;
+}
+.form-trabajaConNosotros label {
+  margin-bottom: 10px;
+}
+.form-trabajaConNosotros select {
+  margin-bottom: 20px;
+}
+.form-trabajaConNosotros textarea {
+  margin-bottom: 20px;
 }
 
 .mapaContacto {
@@ -394,6 +279,107 @@ a :hover {
   align-items: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #fbfbfb;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  height: 150px;
+  width: 1170px;
+  padding: 0px 20px;
+  animation-duration: 1s;
+  animation-name: aparecerHeader;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+@keyframes aparecerHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header .logo {
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 6px 0px 15px 0px;
+}
+header .logo img {
+  height: 70px;
+  width: auto;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  background-color: #030f27;
+  justify-content: right;
+  box-shadow: 0px 15px 20px 0px rgba(40, 40, 80, 0.13);
+  position: relative !important;
+  z-index: 50 !important;
+}
+.navbar .navbar-dark .navbar-toggler {
+  border-style: none;
+}
+.navbar .navbar-collapse {
+  justify-content: space-evenly;
+}
+.navbar .nav-item {
+  margin-right: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+}
+
+main {
+  height: auto;
+  width: 1170px;
+  background-size: cover;
+  padding: 0px 20px 10px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  animation-duration: 1.2s;
+  animation-name: aparecer;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #footer {
   width: 100vw;
   background-color: #030f27;
@@ -418,7 +404,7 @@ a :hover {
 }
 #footer .logoFooter img {
   height: 70px;
-  width: 70px;
+  width: auto;
 }
 #footer .logoTextoFooter {
   height: auto;
@@ -476,16 +462,59 @@ a :hover {
   text-align: flex-start;
 }
 
-h1 {
-  font-size: 25px;
+.cont {
+  display: flex;
+  justify-self: stretch;
+  align-self: stretch;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px rgba(40, 40, 80, 0.1);
 }
 
-h2 {
+.anclaje {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.anclaje h5 {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+.anclaje i {
   font-size: 20px;
+  color: #030f27;
+}
+.anclaje :hover {
+  color: #333;
+}
+
+a {
+  color: black;
+}
+a :link {
+  text-decoration: none;
+}
+a :visited {
+  text-decoration: none;
+  color: black;
+}
+a :hover {
+  text-decoration: none;
 }
 
 h1, h2 {
-  margin-top: 10px;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 16px;
 }
 
 .textoGeneral {
@@ -498,12 +527,11 @@ h1, h2 {
   width: 100%;
   display: flex;
   justify-content: left;
-  flex-direction: row;
   height: auto;
 }
 
 hr {
-  border-top: 1px solid #030f27;
+  border-top: 1.8px solid #030f27;
   width: 100%;
 }
 
@@ -516,35 +544,7 @@ hr {
   color: red;
 }
 
-.navbar {
-  width: 100%;
-  display: flex;
-  border-radius: 5px;
-  background-color: #030f27;
-  justify-content: right;
-  box-shadow: 0px 15px 20px 0px rgba(40, 40, 80, 0.13);
-  position: relative !important;
-  z-index: 50 !important;
-}
-.navbar .navbar-dark .navbar-toggler {
-  border-style: none;
-}
-.navbar .navbar-collapse {
-  justify-content: space-evenly;
-}
-.navbar .nav-item {
-  margin-right: 20px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: rgb(255, 255, 255);
-}
-
-.slideTrabajaConNosotros img {
-  border-radius: 5px;
-}
-
-.slideNosotros img {
+.slide img {
   -o-object-fit: cover;
      object-fit: cover;
   max-height: 400px;
@@ -558,11 +558,6 @@ hr {
   color: #fff;
 }
 
-@media only screen and (max-width: 1190px) {
-  .main-trabajaConNosotros {
-    justify-content: center;
-  }
-}
 @media only screen and (max-width: 1109px) {
   .cont2 {
     overflow: auto;

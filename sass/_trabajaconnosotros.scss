@@ -1,0 +1,37 @@
+//TRABAJA CON NOSOTROS INICIO
+
+.género {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botonTrabajaConNosotros{
+    margin-top: 10px;
+}
+
+.slideTrabajaConNosotros img{
+    border-radius: 5px;
+}
+
+.form-trabajaConNosotros{
+    
+    padding: 20px 20px 0px 0px;
+    
+    & input {
+        margin: 0px 0px 20px;
+    }
+
+    & label {
+        margin-bottom: 10px;
+    }
+
+    & select {
+        margin-bottom: 20px;
+    }
+    
+    & textarea {
+        margin-bottom: 20px;
+    }
+}
+
+//TRABAJA CON NOSOTROS FIN
